@@ -39,7 +39,7 @@ fun main() {
     // Operador Ternario em Kotlin
 
     val valor = 10
-    val str = if (valor == 10) "Valor igual a 10" else "Valor diferente de 10"
+    val str = "Valor igual a 10"
     println(str)
 
     // JAVA: String str = valor == 10 ? "Sim" : "Não";

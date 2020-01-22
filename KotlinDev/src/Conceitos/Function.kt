@@ -1,7 +1,7 @@
 package Conceitos
 
 fun calculaBonus(a: Int, b: Int, c: Int) {
-    println("Valor: ${soma(a, b) * c}")
+    println("Valor: ${sum(a, b) * c}")
 }
 
 fun hello(nome: String) : String {
@@ -11,7 +11,7 @@ fun hello(nome: String) : String {
 // function one line
 fun hello2(nome: String) : String = "Ola $nome"
 
-fun soma(x: Int, y: Int) : Int = x + y
+fun sum(x: Int, y: Int) : Int = x + y
 
 fun main() {
 
@@ -21,6 +21,7 @@ fun main() {
 
     calculaBonus(valor1, valor2, valor3)
 
+    println(hello("Jose"))
     println(hello2("Hilton"))
 }
 

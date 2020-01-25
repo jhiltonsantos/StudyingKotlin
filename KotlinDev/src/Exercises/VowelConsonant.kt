@@ -61,9 +61,15 @@ fun countConsonants(phrase: String): Int {
     return count
 }
 
+fun countVowelsFilter(phrase: String) : Int {
+    return phrase.filter { it.toLowerCase() in "aeiou" }.length
+}
+
 fun main() {
     val nome = "Hilton Jose"
     println("Nome: $nome")
-    println("Quantidade de Vogais: ${countVowels(nome)}")
-    println("Quantidade de Consoantes: ${countConsonants(nome)}")
+    println("Quantidade de Vogais: ${countVowels(nome)}.")
+    println("Quantidade de Consoantes: ${countConsonants(nome)}.")
+    println("Quantidade de Vogais[Filter]: ${countVowelsFilter(nome)}.")
 }
+

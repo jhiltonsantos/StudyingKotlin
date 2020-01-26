@@ -3,7 +3,8 @@ package Exercises
 import org.junit.Assert
 import org.junit.Test
 
-class VowelConsonantTest {
+class
+VowelConsonantTest {
 
     @Test
     fun countVowels() {

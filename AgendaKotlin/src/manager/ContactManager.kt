@@ -10,7 +10,6 @@ class ContactManager {
 
         val contact = ContactEntity(name, phone)
         ContactRepository.save(contact)
-
     }
 
     fun remove(name: String, phone: String) {
@@ -18,11 +17,20 @@ class ContactManager {
 
         val contact = ContactEntity(name, phone)
         ContactRepository.remove(contact)
-
     }
 
     fun getList(): MutableList<ContactEntity> {
         return ContactRepository.getContactList()
+    }
+
+    fun getContactCount(): String {
+        val list = getList()
+
+        return when {
+            list.isEmpty() -> "Nenhum contato"
+            list.size == 1 -> "1 contato"
+            else -> "${list.size} contatos"
+        }
     }
 
     private fun validate(name: String, phone: String) {

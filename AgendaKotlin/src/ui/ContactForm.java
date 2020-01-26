@@ -1,5 +1,7 @@
 package ui;
 
+import manager.ContactManager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +17,8 @@ public class ContactForm extends JFrame {
     private JButton buttonSave;
     private JLabel labelPhone;
 
+    private ContactManager mContactManager;
+
     public ContactForm() {
 
         setContentPane(rootPanel);
@@ -28,15 +32,26 @@ public class ContactForm extends JFrame {
         // Encerrar o Programa ao fechar a Tela
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        setListeners();
+        mContactManager = new ContactManager();
 
+        setListeners();
     }
 
     private void setListeners() {
         buttonSave.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                try {
+                    String name = textName.getText();
+                    String phone = textPhone.getText();
 
+                    mContactManager.save(name, phone);
+                    new MainForm();
+                    dispose();
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(new JFrame(), e.getMessage());
+                }
             }
         });
 

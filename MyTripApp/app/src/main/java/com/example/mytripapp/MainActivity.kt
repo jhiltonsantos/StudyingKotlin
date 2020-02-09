@@ -6,8 +6,9 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.NumberFormatException
+import java.text.NumberFormat
 
-class MainActivity : AppCompatActivity(), View.OnClickListener{
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +44,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
                 val price = editPrice.text.toString().toFloat()
 
                 val resultCalc = (distance * price) / autonomy
-                textValue.setText("Total: $resultCalc")
+                val strResult = NumberFormat.getCurrencyInstance().format(resultCalc)
+                textValue.setText(strResult)
 
             } catch (NFE: NumberFormatException) {
                 Toast.makeText(applicationContext, R.string.valid_value, Toast.LENGTH_LONG).show()

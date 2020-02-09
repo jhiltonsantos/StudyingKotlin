@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#43523D</color>
+    <color name="colorPrimaryDark">#F243523D</color>
+    <color name="colorAccent">#43523D</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#388063</color>
+
+    //Nokia Theme
     <color name="colorNokiaBg">#C7F0D8</color>
     <color name="colorNokia">#43523D</color>
+
+    //Material Dark Theme
+    <color name="colorDarkGrey">#121212</color>
+    <color name="colorDarkGrey90">#80121212</color>
+    <color name="colorDarkPrimary">#1F1B24</color>
+    <color name="colorDarkAAA">#1F1A24</color>
+    <color name="colorDarkAA">#332940</color>
+    <color name="colorPurpleAA">#8177a6</color>
+    <color name="colorPrimaryMaterial">#BB86FC</color>
+    <color name="colorGreenShiny">#b4ff74</color>
+    <color name="colorButtonYellowDark">#9bad60</color>
+
+
 </resources>

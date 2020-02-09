@@ -5,4 +5,9 @@
     <string name="app_price">Preço</string>
     <string name="calc">Calcular</string>
     <string name="valid_value">Not a Valid Values</string>
+    <string name="viewDistance">Total de Km</string>
+    <string name="viewPrice">Preço por litro</string>
+    <string name="viewAutonomy">km por litro</string>
+    <string name="viewSpent">Seu gasto total será de:</string>
+    <string name="r_0_00">R$ 0,00</string>
 </resources>

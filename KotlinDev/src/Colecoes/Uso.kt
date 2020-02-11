@@ -1,5 +1,7 @@
 package Colecoes
 
+
+//Data Class - Classe que só recebe dados
 data class Food(val name: String, val calories: Double, val ingredients: List<Ingredients> = listOf())
 
 data class Ingredients(val name: String, val quantity: Int)
